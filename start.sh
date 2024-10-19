@@ -1,0 +1,5 @@
+BACKEND_PORT=3031
+UI_PORT=5175
+
+./ui.sh "$BACKEND_PORT" "$UI_PORT"
+./server.sh "$BACKEND_PORT"
