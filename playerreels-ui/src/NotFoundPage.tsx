@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function App() {
+function NotFound() {
   const [count, setCount] = useState(0);
+  
   return (
     <>
-      <h1 className="text-xl font-bold underline">Hello World </h1>
-      <Link to='./Login'>Login</Link>
+       <div><h1>404 Not Found</h1></div>
+       <Link to="/">back to Home</Link>
     </>
   );
 }
 
-export default App;
+export default NotFound;
