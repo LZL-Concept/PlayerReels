@@ -8,7 +8,7 @@ if [ -z "$1" ]; then
     node_server_port="$default_node_server_port"
 fi
 
-path_to_node_server="./backend/playerreels-node-main"
+path_to_node_server="./backend/node-main"
 
 # Start TypeScript compiler in watch mode
 tsc --watch --project "$path_to_node_server/tsconfig.json" &
