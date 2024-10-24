@@ -13,7 +13,7 @@ if [ -z "$2" ]; then
     ui_port="$default_ui_port"
 fi
 
-path_to_frontend="./playerreels-ui"
+path_to_frontend="./ui"
 path_back_from_frontend="../"
 
 cd "$path_to_frontend" || { echo "Failed to change directory to $path_to_frontend"; exit 1; }
