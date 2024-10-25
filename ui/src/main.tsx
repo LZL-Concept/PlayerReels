@@ -3,9 +3,10 @@ import { createRoot } from 'react-dom/client';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import App from './App.tsx'
 import './index.css'
-import LoginPage from './loginPage/Login.tsx';
-import NotFound from './NotFoundPage.tsx';
-import RegisterPage from './registerPage/RegisterPage.tsx';
+import NotFound from './pages/not-found/NotFoundPage.tsx';
+import LoginPage from './pages/login/Login.tsx';
+import RegisterPage from './pages/register/RegisterPage.tsx';
+
 
 const router = createBrowserRouter([
   {
