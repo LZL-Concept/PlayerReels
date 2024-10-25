@@ -21,27 +21,36 @@ function LoginPage() {
   };
   return (
     <>
-     <h1 className="text-xl font-bold underline">Login Page to PlayerReels</h1>
-    <div className='flex justify-center content-center'>
-      <form action="login" className="loginBox">
-        <div>
-            <input type="text" placeholder='Username' required/>
+    <div className='bg-primary flex justify-center items-center h-screen'>
+      <div className='bg-fourth w-96 p-6 shadow-xl rounded-3xl'>
+        <h1 className="text-xl text-center">PlayerReels</h1>
+        <hr className='mt-5'/>
+        <div className='mt-5'>
+          <form action="login" className="loginBox">
+            <div>
+                <label className='block mb-2 '>Username</label>
+                <input type="text" required/>
+            </div>
+            <div>
+                <label className='block mb-2'>Password</label>
+                <input type="text" required/>
+                <span></span>
+            </div>
+            <div>
+                <label><input type="checkbox"/> Remember me</label>
+            </div>
+            <button type='submit' onClick={handleLogin}>
+                <span>Login</span>
+            </button>
+            <button type='submit' onClick={handleForgot}
+              className=''>
+                <span>Forgot Password?</span>
+            </button>
+            <hr/>
+            <Link to='./Register'>Create Account</Link>
+          </form>
         </div>
-        <div>
-            <input type="text" placeholder='Password' required/>
-        </div>
-        <div>
-            <label><input type="checkbox"/> Remember me</label>
-        </div>
-        <button type='submit' onClick={handleLogin}>
-            <span>Login</span>
-        </button>
-        <button type='submit' onClick={handleForgot}>
-            <span>Forgot Password?</span>
-        </button>
-        <hr/>
-        <Link to='./Register'>Create Account</Link>
-      </form>
+      </div>
     </div>
     </>
   );
