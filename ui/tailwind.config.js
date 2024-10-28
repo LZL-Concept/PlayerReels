@@ -14,19 +14,20 @@ export default {
     },
     colors: {
       primary: {
-        DEFAULT: '#fdfffcff',  // Base primary color
+        DEFAULT: '#fdfffcff',  // white
       },
-      second: {
-        DEFAULT: '#235789ff',
+      bl: {
+        DEFAULT: '#235789ff', //blue
       },
       third: {
-        DEFAULT: '#c1292eff',
+        DEFAULT: '#c1292eff', //red
       },
       fourth: {
-        DEFAULT: '#f1d302ff',
+        DEFAULT: '#f1d302ff', //yellow
       },
-      fivth: {
-        DEFAULT: '#020100ff',  // Green for success messages
+      blk: {
+        DEFAULT: '#020100ff',  // black
+        light:'#0d0d0dff'     //grey
       }
     },
     fontFamily: {
