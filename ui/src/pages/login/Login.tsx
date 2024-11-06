@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom';
 import { MdEmail } from "react-icons/md";
 
-function LoginPage() {
-  const handleLogin = () =>{
-    alert("login clicked")
+function LoginPage(){
+
+  const handleLogin = (e: { preventDefault: () => void; })=>{
+    e.preventDefault();
+    const username = document.getElementById('username') as HTMLInputElement
+    const password = document.getElementById('password') as HTMLInputElement
+    console.log(username.value)
+    console.log(password.value)
   };
 
   const handleForgot = () =>{
@@ -14,18 +19,15 @@ function LoginPage() {
     <>
       <div className='bg-blk flex justify-center items-center h-screen text-primary'>
         <div className='bg-blk-light w-[600px] h-[680px] p-6 shadow-xl rounded-3xl shrink-0'>
-          <h1 className="font-bold text-xl text-center mb-2">Welcome</h1>
-          <hr className='mt-10'/>
-          <div className='mt-5'>
-            <form action="login" className="loginBox">
+          <div className='mt-20'>
+            <form action="login" id='loginForm' className="loginBox">
               <div>
-                  
-                  <label className='block mb-2'>Username <MdEmail className='inline-block'/></label>
-                  <input type="text" required className='w-full h-14 outline-none border-b-2 bg-blk-light'/>
+                  <input type="text" id='username' required placeholder='Username'
+                  className='w-full h-14 outline-none border-b-2 bg-blk-light'/>
               </div>
               <div>
-                  <label className='block mb-2'>Password</label>
-                  <input type="password" required className='mb-2 w-full h-14 outline-none border-b-2 bg-blk-light'/>
+                  <input type="password" id='password' required placeholder='Password'
+                  className='mt-10 mb-2 w-full h-14 outline-none border-b-2 bg-blk-light'/>
               </div>
               <div className='mb-16'>
                 <div>
